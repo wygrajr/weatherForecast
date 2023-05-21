@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,7 +13,56 @@
         <header>
             <h1>Upcoming Forecast Dashboard</h1>
         </header>
+        <aside>
+            <div id="searchSection">
+                <h2>Search for a City:</h2>
+                <form id="search-form">
+                    <label for="search-query"></label>
+                    <input type="text" id="search-query" name="q"><br>
+                    <button id="searchButton">Search</button>
+                </form>
+            </div>
+        </aside>
         <main>
+            <div id="today">
+                <h2 id="location">City</h2>
+                <h3 id="tempature">Tempature:</h3>
+                <h3 id="windSpeed">Wind Speeds:</h3>
+                <h3 id="humidity">Humidity:</h3>
+            </div>
+                <h2 id="5DayheadsUp">Next 5 Days</h2>
+            <div id="forecast">
+                <div id="day1">
+                    <h2 id="loc1"></h2>
+                    <h3 id="temp1">Temp:</h3>
+                    <h3 id="wind1">Wind:</h3>
+                    <h3 id="humid1">Humidity:</h3>
+                </div>
+                <div id="day2">
+                    <h2 id="loc2"></h2>
+                    <h3 id="temp2">Temp:</h3>
+                    <h3 id="wind2">Wind:</h3>
+                    <h3 id="humid2">Humidity:</h3>
+                </div>
+                <div id="day3">
+                    <h2 id="loc3"></h2>
+                    <h3 id="temp3">Temp:</h3>
+                    <h3 id="wind3">Wind:</h3>
+                    <h3 id="humid3">Humidity:</h3>
+                </div>
+                <div id="day4">
+                    <h2 id="loc4"></h2>
+                    <h3 id="temp4">Temp:</h3>
+                    <h3 id="wind4">Wind:</h3>
+                    <h3 id="humid4">Humidity:</h3>
+                </div>
+                <div id="day5">
+                    <h2 id="loc5"></h2>
+                    <h3 id="temp5">Temp:</h3>
+                    <h3 id="wind5">Wind:</h3>
+                    <h3 id="humid5">Humidity:</h3>
+                </div>
+            </div>
         </main>
         <script src="assets/script.js"></script>
     </body>
