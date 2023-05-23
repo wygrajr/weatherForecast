@@ -1,7 +1,5 @@
 var key="2c5bcf8987116e3df22f7b64c6a46515";
 
-
-
 var days=[$("#today"),$("#dayNx1"),$("#dayNx2"),$("#dayNx3"),$("#dayNx4"),$("#dayNx5")]
 var location=[$("#location"),$("#dateNx1"),$("#dateNx2"),$("#dateNx3"),$("#dateNx4"),$("#dateNx5")]
 var tempature=[$("#tempature"),$("#tempNx1"),$("#tempNx2"),$("#tempNx3"),$("#tempNx4"),$("#tempNx5")];
