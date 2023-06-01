@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!--<link rel="stylesheet" href="assets/style.css" />-->
+        <link rel="stylesheet" href="assets/css/style.css" />
         <title>Weather Dashboard</title>
     </head>
 
@@ -13,65 +13,65 @@
         <header>
             <h1>Upcoming Forecast Dashboard</h1>
         </header>
-        <aside>
-            <div id="searchSection">
-                <h2>Search for a City:</h2>
-                <form id="search-form">
-                    <label for="search-query"></label>
-                    <input type="text" id="search-query" name="q"><br>
-                    <button id="searchButton">Search</button>
-                </form>
-            </div>
-        </aside>
-        <main>
-            <div id="today">
-                <h2 id="location">City</h2>
-                <h3 id="tempature">Tempature:</h3>
-                <h3 id="windSpeed">Wind Speeds:</h3>
-                <h3 id="humidity">Humidity:</h3>
-            </div>
-                <h2 id="5DayheadsUp">Next 5 Days</h2>
-            <div id="forecast">
-                <div id="dayNx1">
-                    <h2 id="dateNx1"></h2>
-                    <h3 id="tempNx1">Temp:</h3>
-                    <h3 id="windNx1">Wind:</h3>
-                    <h3 id="humidNx1">Humidity:</h3>
+        <div id="weather">
+            <aside>
+                <div id="searchSection">
+                    <h2>Search for a City:</h2>
+                    <form id="search-form">
+                        <label for="search-query"></label>
+                        <input type="text" id="search-query" name="q"><br>
+                        <button id="searchButton">Search</button>
+                    </form>
                 </div>
-                <div id="dayNx2">
-                    <h2 id="dateNx2"></h2>
-                    <h3 id="tempNx2">Temp:</h3>
-                    <h3 id="windNx2">Wind:</h3>
-                    <h3 id="humidNx2">Humidity:</h3>
+            </aside>
+            <main>
+                <div id="today">
+                    <h2 id="location">City</h2>
+                    <h3 id="tempature">Tempature:</h3>
+                    <h3 id="windSpeed">Wind Speeds:</h3>
+                    <h3 id="humidity">Humidity:</h3>
                 </div>
-                <div id="dayNx3">
-                    <h2 id="dateNx3"></h2>
-                    <h3 id="tempNx3">Temp:</h3>
-                    <h3 id="windNx3">Wind:</h3>
-                    <h3 id="humidNx3">Humidity:</h3>
+                    <h2 id="5DayheadsUp">Next 5 Days</h2>
+                <div id="forecast">
+                    <div id="dayNx1">
+                        <h2 id="dateNx1"></h2>
+                        <h3 id="tempNx1">Temp:</h3>
+                        <h3 id="windNx1">Wind:</h3>
+                        <h3 id="humidNx1">Humidity:</h3>
+                    </div>
+                    <div id="dayNx2">
+                        <h2 id="dateNx2"></h2>
+                        <h3 id="tempNx2">Temp:</h3>
+                        <h3 id="windNx2">Wind:</h3>
+                        <h3 id="humidNx2">Humidity:</h3>
+                    </div>
+                    <div id="dayNx3">
+                        <h2 id="dateNx3"></h2>
+                        <h3 id="tempNx3">Temp:</h3>
+                        <h3 id="windNx3">Wind:</h3>
+                        <h3 id="humidNx3">Humidity:</h3>
+                    </div>
+                    <div id="dayNx4">
+                        <h2 id="dateNx4"></h2>
+                        <h3 id="tempNx4">Temp:</h3>
+                        <h3 id="windNx4">Wind:</h3>
+                        <h3 id="humidNx4">Humidity:</h3>
+                    </div>
+                    <div id="dayNx5">
+                        <h2 id="dateNx5"></h2>
+                        <h3 id="tempNx5">Temp:</h3>
+                        <h3 id="windNx5">Wind:</h3>
+                        <h3 id="humidNx5">Humidity:</h3>
+                    </div>
                 </div>
-                <div id="dayNx4">
-                    <h2 id="dateNx4"></h2>
-                    <h3 id="tempNx4">Temp:</h3>
-                    <h3 id="windNx4">Wind:</h3>
-                    <h3 id="humidNx4">Humidity:</h3>
-                </div>
-                <div id="dayNx5">
-                    <h2 id="dateNx5"></h2>
-                    <h3 id="tempNx5">Temp:</h3>
-                    <h3 id="windNx5">Wind:</h3>
-                    <h3 id="humidNx5">Humidity:</h3>
-                </div>
-            </div>
-        </main>
-        
-        
+            </main>
+        </div>        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
         <script 
         src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
         integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
         crossorigin="anonymous"
         ></script>
-        <script src="assets/js/script.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/script.js"></script>
     </body>
 </html>
