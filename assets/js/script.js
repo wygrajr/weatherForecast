@@ -1,4 +1,5 @@
 var key="2c5bcf8987116e3df22f7b64c6a46515";
+var locations = [];
 
 function getApi(requestUrl) {
     fetch(requestUrl)
@@ -55,7 +56,25 @@ function getWeatherAPI (requestWeatherUrl){
 $("#searchButton").on('click', function (event){
     event.preventDefault();
     var cityName = $('#search-query').val()
+    locations.push(cityName)
+    storeLocations()
+    $('#search-list').text(locations)
     $('#search-query').val("")
     var requestGeocodeUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${key}`;
     getApi(requestGeocodeUrl);
 });
+
+function init() {
+  var storedLocations = JSON.parse(localStorage.getItem("locations"));
+
+  if (storedLocations !== null) {
+    locations = storedLocations;
+    $('#search-list').text(locations)
+  }
+}
+
+function storeLocations() {
+  localStorage.setItem("locations", JSON.stringify(locations));
+}
+
+init()
