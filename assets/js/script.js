@@ -20,7 +20,10 @@ function getWeatherAPI (requestWeatherUrl){
   var tempature=[$("#tempature"),$("#tempNx1"),$("#tempNx2"),$("#tempNx3"),$("#tempNx4"),$("#tempNx5")];
   var windSpeed=[$("#windSpeed"),$("#windNx1"),$("#windNx2"),$("#windNx3"),$("#windNx4"),$("#windNx5")];
   var humidity=[$("#humidity"),$("#humidNx1"),$("#humidNx2"),$("#humidNx3"),$("#humidNx4"),$("#humidNx5")];
-  
+
+  var currentDate = dayjs().format('DD/MM/YYYY')
+
+
     fetch(requestWeatherUrl)
         .then(function(response){
           return response.json();
@@ -34,14 +37,14 @@ function getWeatherAPI (requestWeatherUrl){
             }
 
             days[0].append(getWeatherIcon(0));
-            location[0].text(data.city.name+" - "+dateFormat(0));
+            location[0].text(data.city.name+" - "+currentDate);
             tempature[0].text("Temp: "+data.list[0].main.temp+" F");
             windSpeed[0].text("Wind: "+data.list[0].wind.speed+" mph");
             humidity[0].text("Humidity: "+data.list[0].main.humidity+"%");
 
             for (var i = 1, x = 6; i<6; i++, x=x+8){
                 days[i].append(getWeatherIcon(x));
-                location[i].text(dateFormat(x));
+                location[i].text(nextDay = dayjs().add(1,'d'));
                 tempature[i].text("Temp: "+data.list[x].main.temp+" F");
                 windSpeed[i].text("Wind: "+data.list[x].wind.speed+" mph");
                 humidity[i].text("Humidity: "+data.list[x].main.humidity+"%");
@@ -51,8 +54,8 @@ function getWeatherAPI (requestWeatherUrl){
 
 $("#searchButton").on('click', function (event){
     event.preventDefault();
-    cityName = $('search-query').val()
-    $('search-query').val("")
+    var cityName = $('#search-query').val()
+    $('#search-query').val("")
     var requestGeocodeUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${key}`;
     getApi(requestGeocodeUrl);
 });
