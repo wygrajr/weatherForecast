@@ -1,11 +1,5 @@
 var key="2c5bcf8987116e3df22f7b64c6a46515";
 
-var days=[$("#today"),$("#dayNx1"),$("#dayNx2"),$("#dayNx3"),$("#dayNx4"),$("#dayNx5")]
-var location=[$("#location"),$("#dateNx1"),$("#dateNx2"),$("#dateNx3"),$("#dateNx4"),$("#dateNx5")]
-var tempature=[$("#tempature"),$("#tempNx1"),$("#tempNx2"),$("#tempNx3"),$("#tempNx4"),$("#tempNx5")];
-var windSpeed=[$("#windSpeed"),$("#windNx1"),$("#windNx2"),$("#windNx3"),$("#windNx4"),$("#windNx5")];
-var humidity=[$("#humidity"),$("#humidNx1"),$("#humidNx2"),$("#humidNx3"),$("#humidNx4"),$("#humidNx5")];
-
 function getApi(requestUrl) {
     fetch(requestUrl)
       .then(function (response) {
@@ -20,6 +14,13 @@ function getApi(requestUrl) {
 };
 
 function getWeatherAPI (requestWeatherUrl){
+
+  var days=[$("#today"),$("#dayNx1"),$("#dayNx2"),$("#dayNx3"),$("#dayNx4"),$("#dayNx5")]
+  var location=[$("#location"),$("#dateNx1"),$("#dateNx2"),$("#dateNx3"),$("#dateNx4"),$("#dateNx5")]
+  var tempature=[$("#tempature"),$("#tempNx1"),$("#tempNx2"),$("#tempNx3"),$("#tempNx4"),$("#tempNx5")];
+  var windSpeed=[$("#windSpeed"),$("#windNx1"),$("#windNx2"),$("#windNx3"),$("#windNx4"),$("#windNx5")];
+  var humidity=[$("#humidity"),$("#humidNx1"),$("#humidNx2"),$("#humidNx3"),$("#humidNx4"),$("#humidNx5")];
+  
     fetch(requestWeatherUrl)
         .then(function(response){
           return response.json();
@@ -48,14 +49,10 @@ function getWeatherAPI (requestWeatherUrl){
         })
 };
 
-function userSearch() {
-    cityName = $(search).val()
-    $(search).val("")
-};
-
-searchButton.on('click', function (event){
+$("#searchButton").on('click', function (event){
     event.preventDefault();
-    userSearch();
+    cityName = $('search-query').val()
+    $('search-query').val("")
     var requestGeocodeUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${key}`;
     getApi(requestGeocodeUrl);
 });
